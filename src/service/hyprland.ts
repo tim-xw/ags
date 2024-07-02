@@ -312,8 +312,10 @@ export class Hyprland extends Service {
                     ['clients', 'workspaces'].forEach(e => this.notify(e));
                     this.emit('client-added', '0x' + argv[0]);
                     break;
-
+                
                 case 'movewindow':
+                case 'moveintogroup':
+                case 'moveoutofgroup':
                 case 'windowtitle':
                     await this._syncClients(false);
                     await this._syncWorkspaces(false);
