@@ -316,6 +316,7 @@ export class Hyprland extends Service {
                 case 'movewindow':
                 case 'moveintogroup':
                 case 'moveoutofgroup':
+                case 'togglegroup':
                 case 'windowtitle':
                     await this._syncClients(false);
                     await this._syncWorkspaces(false);
