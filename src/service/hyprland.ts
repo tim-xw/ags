@@ -322,7 +322,8 @@ export class Hyprland extends Service {
                     await this._syncWorkspaces(false);
                     ['clients', 'workspaces'].forEach(e => this.notify(e));
                     break;
-
+                
+                case 'custom':
                 case 'moveworkspace':
                     await this._syncClients(false);
                     await this._syncWorkspaces(false);
